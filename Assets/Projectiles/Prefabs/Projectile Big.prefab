@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7834045608832135411}
   - component: {fileID: 4761727535279589456}
   - component: {fileID: 2086107737074386921}
-  - component: {fileID: 2625013852701186885}
+  - component: {fileID: 1843857431297864579}
   m_Layer: 4
   m_Name: Projectile Big
   m_TagString: Moveable
@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 9032847836865187467}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -5.844331, y: 2.4456565, z: -1.8938165}
-  m_LocalScale: {x: 180, y: 180, z: 180}
+  m_LocalScale: {x: 120, y: 120, z: 120}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -42,7 +42,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9032847836865187467}
-  m_Mesh: {fileID: -5214140485765058581, guid: 52a296918a2f2674c93e048c63f6393d, type: 3}
+  m_Mesh: {fileID: 5042875936764666720, guid: 4e924d3e76ba65e4798a966f75afb6d5, type: 3}
 --- !u!23 &4761727535279589456
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -93,7 +93,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9032847836865187467}
   serializedVersion: 2
-  m_Mass: 3
+  m_Mass: 1.2
   m_Drag: 0.2
   m_AngularDrag: 0.05
   m_UseGravity: 1
@@ -101,7 +101,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 1
---- !u!64 &2625013852701186885
+--- !u!64 &1843857431297864579
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -114,4 +114,4 @@ MeshCollider:
   serializedVersion: 4
   m_Convex: 1
   m_CookingOptions: 30
-  m_Mesh: {fileID: -5214140485765058581, guid: 52a296918a2f2674c93e048c63f6393d, type: 3}
+  m_Mesh: {fileID: 5042875936764666720, guid: 4e924d3e76ba65e4798a966f75afb6d5, type: 3}
