@@ -9,10 +9,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1489085686261694998}
-  - component: {fileID: 7834045608832135411}
   - component: {fileID: 4761727535279589456}
   - component: {fileID: 2086107737074386921}
-  - component: {fileID: 2625013852701186885}
+  - component: {fileID: 3113383209046651492}
+  - component: {fileID: 8350132316712829922}
   m_Layer: 4
   m_Name: Projectile
   m_TagString: Moveable
@@ -35,14 +35,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &7834045608832135411
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9032847836865187467}
-  m_Mesh: {fileID: -5214140485765058581, guid: 52a296918a2f2674c93e048c63f6393d, type: 3}
 --- !u!23 &4761727535279589456
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -93,7 +85,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9032847836865187467}
   serializedVersion: 2
-  m_Mass: 2.2
+  m_Mass: 0.8
   m_Drag: 0.2
   m_AngularDrag: 0.05
   m_UseGravity: 1
@@ -101,7 +93,15 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 1
---- !u!64 &2625013852701186885
+--- !u!33 &3113383209046651492
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9032847836865187467}
+  m_Mesh: {fileID: 5042875936764666720, guid: 4e924d3e76ba65e4798a966f75afb6d5, type: 3}
+--- !u!64 &8350132316712829922
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -114,4 +114,4 @@ MeshCollider:
   serializedVersion: 4
   m_Convex: 1
   m_CookingOptions: 30
-  m_Mesh: {fileID: -5214140485765058581, guid: 52a296918a2f2674c93e048c63f6393d, type: 3}
+  m_Mesh: {fileID: 5042875936764666720, guid: 4e924d3e76ba65e4798a966f75afb6d5, type: 3}
