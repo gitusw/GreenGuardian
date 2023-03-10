@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95e66c6366d904e98bc83428217d4fd7, type: 3}
+  m_Name: Ayla_BranchPatrol
+  m_EditorClassIdentifier: 
+  _data:
+    _json: '{"graph":{"variables":{"Kind":"Flow","collection":{"$content":[{"name":"timerRunning","value":{"$content":false,"$type":"System.Boolean"},"typeHandle":{"Identification":"System.Boolean,
+      mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"},"controlInputDefinitions":[],"controlOutputDefinitions":[],"valueInputDefinitions":[],"valueOutputDefinitions":[],"title":null,"summary":null,"pan":{"x":-1031.841,"y":-157.6255},"zoom":0.9,"elements":[{"coroutine":false,"defaultValues":{},"position":{"x":-1725.0,"y":-288.0},"guid":"57a168e5-613d-4347-b3c4-822ac0be4fc2","$version":"A","$type":"Unity.VisualScripting.Update","$id":"10"},{"specifyFallback":false,"kind":"Object","defaultValues":{"name":{"$content":"CheckGrounded","$type":"System.String"},"object":null},"position":{"x":-1422.0,"y":-165.0},"guid":"f4284b8c-2f89-4412-a879-02ea0d3f1cac","$version":"A","$type":"Unity.VisualScripting.GetVariable","$id":"12"},{"specifyFallback":false,"kind":"Object","defaultValues":{"name":{"$content":"Detected","$type":"System.String"},"object":null},"position":{"x":-1190.0,"y":-187.0},"guid":"fa9c38af-9042-43b2-948e-258f8b8fedc3","$version":"A","$type":"Unity.VisualScripting.GetVariable","$id":"14"},{"kind":"Object","defaultValues":{"name":{"$content":"Triggered","$type":"System.String"},"object":null},"position":{"x":-981.0,"y":-315.0},"guid":"7bd0a254-0652-41be-87c2-21fdf77984a7","$version":"A","$type":"Unity.VisualScripting.SetVariable","$id":"16"},{"sourceUnit":{"$ref":"10"},"sourceKey":"trigger","destinationUnit":{"$ref":"16"},"destinationKey":"assign","guid":"f82c1e38-b7ba-4e06-b6d3-984b9ff36694","$type":"Unity.VisualScripting.ControlConnection"},{"sourceUnit":{"$ref":"12"},"sourceKey":"value","destinationUnit":{"$ref":"14"},"destinationKey":"object","guid":"47732bf3-4b1b-4675-8e8a-f1c639f010de","$type":"Unity.VisualScripting.ValueConnection"},{"sourceUnit":{"$ref":"14"},"sourceKey":"value","destinationUnit":{"$ref":"16"},"destinationKey":"input","guid":"b060d24e-85b5-4518-9730-d0e20aab1712","$type":"Unity.VisualScripting.ValueConnection"},{"position":{"xMin":-1449.0,"yMin":-375.0,"xMax":-676.0,"yMax":-39.0},"label":"CheckGrounded","comment":null,"color":{"r":0.0,"g":0.0,"b":0.0,"a":1.0},"guid":"b3ca5db6-68fa-4512-9d53-b8ade37c97ac","$version":"A","$type":"Unity.VisualScripting.GraphGroup"}],"$version":"A"}}'
+    _objectReferences: []
