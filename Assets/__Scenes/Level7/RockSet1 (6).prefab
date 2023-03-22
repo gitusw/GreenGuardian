@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7712119457850540494}
   - component: {fileID: 6676912298298199659}
   - component: {fileID: 8885002924960299681}
-  - component: {fileID: 7821708791609969623}
+  - component: {fileID: 7260002980351683575}
   m_Layer: 0
   m_Name: RockSet1 (6)
   m_TagString: Untagged
@@ -26,7 +26,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6939241521107377012}
-  m_LocalRotation: {x: 0.18207063, y: -0.6184177, z: 0.6686524, w: -0.3705587}
+  m_LocalRotation: {x: 0.1820648, y: -0.6184178, z: 0.66865224, w: -0.37056196}
   m_LocalPosition: {x: 50.41, y: 22.84, z: 246.07}
   m_LocalScale: {x: 3000, y: 3000, z: 3000}
   m_ConstrainProportionsScale: 0
@@ -84,8 +84,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &7821708791609969623
-CapsuleCollider:
+--- !u!64 &7260002980351683575
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -94,7 +94,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.002855639
-  m_Height: 0.0066290516
-  m_Direction: 1
-  m_Center: {x: -5.8207644e-10, y: 0.000000007450581, z: -5.637851e-17}
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 3056366466596868052, guid: 1c17f0dd2c7ca814a8f4ba7a84c2a9db, type: 3}
