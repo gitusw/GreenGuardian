@@ -96,8 +96,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1.2507375, y: 1, z: 1}
+  m_Center: {x: 0.024716118, y: 0, z: -0.00000002218245}
 --- !u!54 &695817952385103711
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -123,6 +123,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 695817953277623900}
+  - component: {fileID: 144224663}
+  - component: {fileID: 144224662}
   m_Layer: 0
   m_Name: PathBlocker
   m_TagString: Untagged
@@ -150,6 +152,42 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &144224663
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 695817953277623901}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2fe5546f775c47d2820aa5e8a715f53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _data:
+    _json: '{"nest":{"source":"Macro","macro":0,"embed":null}}'
+    _objectReferences:
+    - {fileID: 11400000, guid: c29d8ff026223eb4e933ac4d980952d5, type: 2}
+--- !u!114 &144224662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 695817953277623901}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e741851cba3ad425c91ecf922cc6b379, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _data:
+    _json: '{"declarations":{"Kind":"Object","collection":{"$content":[{"name":"enemyList","value":{"$content":[],"$type":"System.Collections.Generic.List`1[[System.Object,
+      mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"typeHandle":{"Identification":"System.Collections.Generic.List`1[[System.Object,
+      mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]],
+      mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"},{"name":"Blockade","value":{"$content":0,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
+      UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
+    _objectReferences:
+    - {fileID: 695817953277623901}
 --- !u!1001 &695817951623543987
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -175,7 +213,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 305099403952755951, guid: 4864666247a262143b2641b085caa043, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.4699993
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 305099403952755951, guid: 4864666247a262143b2641b085caa043, type: 3}
       propertyPath: m_LocalPosition.y
@@ -183,7 +221,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 305099403952755951, guid: 4864666247a262143b2641b085caa043, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.38000107
+      value: -5
       objectReference: {fileID: 0}
     - target: {fileID: 305099403952755951, guid: 4864666247a262143b2641b085caa043, type: 3}
       propertyPath: m_LocalRotation.w
@@ -218,8 +256,20 @@ PrefabInstance:
       value: Explosion Smoke (1)
       objectReference: {fileID: 0}
     - target: {fileID: 8300008272425691202, guid: 4864666247a262143b2641b085caa043, type: 3}
+      propertyPath: prewarm
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8300008272425691202, guid: 4864666247a262143b2641b085caa043, type: 3}
       propertyPath: lengthInSec
       value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8300008272425691202, guid: 4864666247a262143b2641b085caa043, type: 3}
+      propertyPath: startDelay.scalar
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8300008272425691202, guid: 4864666247a262143b2641b085caa043, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8300008272425691202, guid: 4864666247a262143b2641b085caa043, type: 3}
       propertyPath: InitialModule.startColor.maxColor.b
@@ -235,15 +285,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8300008272425691202, guid: 4864666247a262143b2641b085caa043, type: 3}
       propertyPath: InitialModule.startColor.minColor.b
-      value: 0.2924528
+      value: 0.13207549
       objectReference: {fileID: 0}
     - target: {fileID: 8300008272425691202, guid: 4864666247a262143b2641b085caa043, type: 3}
       propertyPath: InitialModule.startColor.minColor.g
-      value: 0.23313455
+      value: 0.11276256
       objectReference: {fileID: 0}
     - target: {fileID: 8300008272425691202, guid: 4864666247a262143b2641b085caa043, type: 3}
       propertyPath: InitialModule.startColor.minColor.r
-      value: 0.28631642
+      value: 0.12966137
       objectReference: {fileID: 0}
     - target: {fileID: 8300008272425691202, guid: 4864666247a262143b2641b085caa043, type: 3}
       propertyPath: InitialModule.gravityModifier.scalar
@@ -324,8 +374,20 @@ PrefabInstance:
       value: Explosion Smoke (2)
       objectReference: {fileID: 0}
     - target: {fileID: 8300008272425691202, guid: 4864666247a262143b2641b085caa043, type: 3}
+      propertyPath: prewarm
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8300008272425691202, guid: 4864666247a262143b2641b085caa043, type: 3}
       propertyPath: lengthInSec
       value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8300008272425691202, guid: 4864666247a262143b2641b085caa043, type: 3}
+      propertyPath: startDelay.scalar
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8300008272425691202, guid: 4864666247a262143b2641b085caa043, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8300008272425691202, guid: 4864666247a262143b2641b085caa043, type: 3}
       propertyPath: InitialModule.startColor.maxColor.b
@@ -341,15 +403,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8300008272425691202, guid: 4864666247a262143b2641b085caa043, type: 3}
       propertyPath: InitialModule.startColor.minColor.b
-      value: 0.2924528
+      value: 0.13207549
       objectReference: {fileID: 0}
     - target: {fileID: 8300008272425691202, guid: 4864666247a262143b2641b085caa043, type: 3}
       propertyPath: InitialModule.startColor.minColor.g
-      value: 0.23313455
+      value: 0.11276256
       objectReference: {fileID: 0}
     - target: {fileID: 8300008272425691202, guid: 4864666247a262143b2641b085caa043, type: 3}
       propertyPath: InitialModule.startColor.minColor.r
-      value: 0.28631642
+      value: 0.12966137
       objectReference: {fileID: 0}
     - target: {fileID: 8300008272425691202, guid: 4864666247a262143b2641b085caa043, type: 3}
       propertyPath: InitialModule.gravityModifier.scalar
@@ -387,15 +449,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 305099403952755951, guid: 4864666247a262143b2641b085caa043, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.4299994
+      value: -3.5
       objectReference: {fileID: 0}
     - target: {fileID: 305099403952755951, guid: 4864666247a262143b2641b085caa043, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.8
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 305099403952755951, guid: 4864666247a262143b2641b085caa043, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 3.3999977
+      value: 3.3
       objectReference: {fileID: 0}
     - target: {fileID: 305099403952755951, guid: 4864666247a262143b2641b085caa043, type: 3}
       propertyPath: m_LocalRotation.w
@@ -430,8 +492,16 @@ PrefabInstance:
       value: Explosion Smoke (3)
       objectReference: {fileID: 0}
     - target: {fileID: 8300008272425691202, guid: 4864666247a262143b2641b085caa043, type: 3}
+      propertyPath: prewarm
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8300008272425691202, guid: 4864666247a262143b2641b085caa043, type: 3}
       propertyPath: lengthInSec
-      value: 0.5
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8300008272425691202, guid: 4864666247a262143b2641b085caa043, type: 3}
+      propertyPath: startDelay.scalar
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8300008272425691202, guid: 4864666247a262143b2641b085caa043, type: 3}
       propertyPath: InitialModule.startColor.maxColor.b
@@ -536,8 +606,20 @@ PrefabInstance:
       value: Explosion Smoke
       objectReference: {fileID: 0}
     - target: {fileID: 8300008272425691202, guid: 4864666247a262143b2641b085caa043, type: 3}
+      propertyPath: prewarm
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8300008272425691202, guid: 4864666247a262143b2641b085caa043, type: 3}
       propertyPath: lengthInSec
       value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8300008272425691202, guid: 4864666247a262143b2641b085caa043, type: 3}
+      propertyPath: startDelay.scalar
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8300008272425691202, guid: 4864666247a262143b2641b085caa043, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 3.5
       objectReference: {fileID: 0}
     - target: {fileID: 8300008272425691202, guid: 4864666247a262143b2641b085caa043, type: 3}
       propertyPath: InitialModule.startColor.maxColor.b
