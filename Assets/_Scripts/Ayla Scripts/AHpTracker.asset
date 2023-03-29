@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95e66c6366d904e98bc83428217d4fd7, type: 3}
+  m_Name: AHpTracker
+  m_EditorClassIdentifier: 
+  _data:
+    _json: '{"graph":{"variables":{"Kind":"Flow","collection":{"$content":[],"$version":"A"},"$version":"A"},"controlInputDefinitions":[],"controlOutputDefinitions":[],"valueInputDefinitions":[],"valueOutputDefinitions":[],"title":null,"summary":null,"pan":{"x":0.0,"y":0.0},"zoom":1.0,"elements":[{"coroutine":false,"defaultValues":{},"position":{"x":-370.0,"y":27.0},"guid":"82f38608-0bee-4529-8edc-3e369eb630d3","$version":"A","$type":"Unity.VisualScripting.FixedUpdate","$id":"9"},{"chainable":false,"member":{"name":"value","parameterTypes":null,"targetType":"UnityEngine.UI.Slider","targetTypeName":"UnityEngine.UI.Slider","$version":"A"},"defaultValues":{"target":null,"input":{"$content":0.0,"$type":"System.Single"}},"position":{"x":10.0,"y":47.0},"guid":"c679f74e-ae3d-491e-a27f-8365cd611b1c","$version":"A","$type":"Unity.VisualScripting.SetMember","$id":"11"},{"defaultValues":{},"position":{"x":-184.0,"y":171.0},"guid":"ef39a7d1-3853-4297-b8e7-7ad1d5844acc","$version":"A","$type":"Unity.VisualScripting.GenericDivide","$id":"14"},{"specifyFallback":false,"kind":"Scene","defaultValues":{"name":{"$content":"AylaHealth","$type":"System.String"}},"position":{"x":-375.0,"y":168.0},"guid":"a2ccd374-6c68-4da4-8f2f-5718cfdd6c57","$version":"A","$type":"Unity.VisualScripting.GetVariable","$id":"16"},{"type":"System.Single","value":{"$content":4.0,"$type":"System.Single"},"defaultValues":{},"position":{"x":-328.0,"y":284.0},"guid":"ff962346-ae48-45e0-b495-82907e199de4","$version":"A","$type":"Unity.VisualScripting.Literal","$id":"18"},{"sourceUnit":{"$ref":"9"},"sourceKey":"trigger","destinationUnit":{"$ref":"11"},"destinationKey":"assign","guid":"74766f6a-19fa-4cab-8851-6ce216b13bf3","$type":"Unity.VisualScripting.ControlConnection"},{"sourceUnit":{"$ref":"14"},"sourceKey":"quotient","destinationUnit":{"$ref":"11"},"destinationKey":"input","guid":"e6d8ac4a-975b-4f8f-a874-fb5195c022d9","$type":"Unity.VisualScripting.ValueConnection"},{"sourceUnit":{"$ref":"16"},"sourceKey":"value","destinationUnit":{"$ref":"14"},"destinationKey":"dividend","guid":"b20f3b0e-468b-4701-a821-9c742d59d93d","$type":"Unity.VisualScripting.ValueConnection"},{"sourceUnit":{"$ref":"18"},"sourceKey":"output","destinationUnit":{"$ref":"14"},"destinationKey":"divisor","guid":"b696f8a4-25a7-4c47-a17e-bf07788503aa","$type":"Unity.VisualScripting.ValueConnection"}],"$version":"A"}}'
+    _objectReferences: []
