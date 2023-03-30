@@ -11,12 +11,13 @@ GameObject:
   - component: {fileID: 6915772764024232917}
   - component: {fileID: 7044000406682338793}
   - component: {fileID: 718901022749142628}
+  - component: {fileID: 6020682966330478545}
   m_Layer: 0
   m_Name: Well_Stone_Base
-  m_TagString: Untagged
+  m_TagString: WindPush
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &6915772764024232917
 Transform:
@@ -83,6 +84,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &6020682966330478545
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2809310448680371298}
+  m_Material: {fileID: 13400000, guid: 2295a947c37b8a34393a01e669679999, type: 2}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 8433120177923101867, guid: 9fe63cca333d9254384264662d65e894, type: 3}
 --- !u!1 &4733098407408416109
 GameObject:
   m_ObjectHideFlags: 0
@@ -94,6 +109,7 @@ GameObject:
   - component: {fileID: 6519036421928165900}
   - component: {fileID: 7889260188511001465}
   - component: {fileID: 6446599153161781712}
+  - component: {fileID: 5691851375168684564}
   m_Layer: 0
   m_Name: Well_Stone_Body
   m_TagString: Untagged
@@ -166,6 +182,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &5691851375168684564
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4733098407408416109}
+  m_Material: {fileID: 13400000, guid: 2295a947c37b8a34393a01e669679999, type: 2}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -369334727807381571, guid: 9fe63cca333d9254384264662d65e894, type: 3}
 --- !u!1 &6070659631591655695
 GameObject:
   m_ObjectHideFlags: 0
@@ -177,6 +207,7 @@ GameObject:
   - component: {fileID: 5879588997447369364}
   - component: {fileID: 8213145151916674703}
   - component: {fileID: 2303180529644800251}
+  - component: {fileID: 6705636728010230050}
   m_Layer: 0
   m_Name: Well_Roof_Tiles
   m_TagString: Untagged
@@ -249,6 +280,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &6705636728010230050
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6070659631591655695}
+  m_Material: {fileID: 13400000, guid: 2295a947c37b8a34393a01e669679999, type: 2}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -359394275209563727, guid: 9fe63cca333d9254384264662d65e894, type: 3}
 --- !u!1 &6138158812809756638
 GameObject:
   m_ObjectHideFlags: 0
@@ -312,6 +357,7 @@ GameObject:
   - component: {fileID: 6609553308646104729}
   - component: {fileID: 5491605427868310472}
   - component: {fileID: 6472759934418971385}
+  - component: {fileID: 2131822079749574704}
   m_Layer: 0
   m_Name: Well
   m_TagString: Untagged
@@ -384,6 +430,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &2131822079749574704
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7782923806576344367}
+  m_Material: {fileID: 13400000, guid: 2295a947c37b8a34393a01e669679999, type: 2}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 8012563891942627399, guid: 9fe63cca333d9254384264662d65e894, type: 3}
 --- !u!1 &9045954778916686227
 GameObject:
   m_ObjectHideFlags: 0
