@@ -7,9 +7,10 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: IslandShader
+  m_Name: IslandShader-TreeWood
   m_Shader: {fileID: 4800000, guid: 7633a2fd8a3bed44791c9e952ff86e5d, type: 3}
   m_ValidKeywords:
+  - _MK_ALBEDO_MAP
   - _MK_ARTISTIC_ANIMATION_STUTTER
   - _MK_ARTISTIC_DRAWN
   - _MK_ARTISTIC_PROJECTION_SCREEN_SPACE
@@ -19,6 +20,7 @@ Material:
   - _MK_FRESNEL_HIGHLIGHTS
   - _MK_LIGHT_BANDED
   - _MK_LIGHT_TRANSMISSION_SUB_SURFACE_SCATTERING
+  - _MK_NORMAL_MAP
   - _MK_OUTLINE_HULL_CLIP
   - _MK_OUTLINE_NOISE
   - _MK_RECEIVE_SHADOWS
@@ -42,8 +44,8 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _AlbedoMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
+        m_Texture: {fileID: 2800000, guid: 5e01734bcbb99f542881aebd807c960c, type: 3}
+        m_Scale: {x: 1, y: 2}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
         m_Texture: {fileID: 0}
@@ -118,7 +120,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 5e01734bcbb99f542881aebd807c960c, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -130,7 +132,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NormalMap:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: bdd8ea28765900244a88a2bb2b237478, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
@@ -239,9 +241,9 @@ Material:
     - _IridescenceSmoothness: 0.5
     - _IridescenceThresholdOffset: 0
     - _Light: 2
-    - _LightBands: 10
-    - _LightBandsScale: 0.496
-    - _LightThreshold: 0.759
+    - _LightBands: 7
+    - _LightBandsScale: 0.741
+    - _LightThreshold: 0.726
     - _LightTransmission: 2
     - _LightTransmissionDistortion: 0.25
     - _LightTransmissionIntensity: 2.12
@@ -249,7 +251,7 @@ Material:
     - _LightTransmissionThresholdOffset: 0.25
     - _Metallic: 0
     - _Mode: 0
-    - _NormalMapIntensity: 1
+    - _NormalMapIntensity: 0.5
     - _OcclusionMapIntensity: 1
     - _OcclusionStrength: 1
     - _OptionsTab: 1
@@ -299,8 +301,8 @@ Material:
     - _ZTest: 4
     - _ZWrite: 1
     m_Colors:
-    - _AlbedoColor: {r: 0.3254902, g: 0.40000004, b: 0.20392159, a: 1}
-    - _Color: {r: 0.32549015, g: 0.4, b: 0.20392156, a: 1}
+    - _AlbedoColor: {r: 1, g: 1, b: 1, a: 1}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _DetailColor: {r: 1, g: 1, b: 1, a: 1}
     - _DissolveBorderColor: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
