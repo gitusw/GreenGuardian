@@ -15,7 +15,7 @@ Material:
   - _MK_DISSOLVE_BORDER_COLOR
   - _MK_OUTLINE_HULL_ORIGIN
   - _MK_OUTLINE_NOISE
-  - _MK_VERTEX_ANIMATION_NOISE
+  - _MK_VERTEX_ANIMATION_SINE
   m_InvalidKeywords:
   - _METALLICSPECGLOSSMAP
   m_LightmapFlags: 4
@@ -166,21 +166,21 @@ Material:
     - _StencilZFail: 0
     - _StylizeTab: 1
     - _Surface: 0
-    - _VertexAnimation: 3
+    - _VertexAnimation: 1
     - _VertexAnimationIntensity: 0.002
     - _VertexAnimationStutter: 0
     - _WorkflowMode: 1
     - _ZTest: 4
     - _ZWrite: 1
     m_Colors:
-    - _AlbedoColor: {r: 0.5611929, g: 0.6320754, b: 0.43231574, a: 1}
+    - _AlbedoColor: {r: 0.41304737, g: 0.4811321, b: 0.28822535, a: 1}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
-    - _Color: {r: 0.56119287, g: 0.6320754, b: 0.4323157, a: 1}
+    - _Color: {r: 0.41304734, g: 0.4811321, b: 0.28822532, a: 1}
     - _DissolveBorderColor: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _OutlineColor: {r: 0.03244037, g: 0.254717, b: 0.07771893, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
-    - _VertexAnimationFrequency: {r: 1, g: 1, b: 3, a: 0}
+    - _VertexAnimationFrequency: {r: 1, g: 1, b: 0.5, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &8642784023544890431
 MonoBehaviour:

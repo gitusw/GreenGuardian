@@ -26,6 +26,7 @@ Material:
   - _MK_RECEIVE_SHADOWS
   - _MK_SPECULAR_ISOTROPIC
   - _MK_THRESHOLD_MAP
+  - _MK_VERTEX_ANIMATION_PULSE
   - _MK_WORKFLOW_ROUGHNESS
   - _MK_WRAPPED_DIFFUSE
   m_InvalidKeywords:
@@ -293,8 +294,8 @@ Material:
     - _Surface: 0
     - _ThresholdMapScale: 5.44
     - _UVSec: 0
-    - _VertexAnimation: 0
-    - _VertexAnimationIntensity: 0.05
+    - _VertexAnimation: 2
+    - _VertexAnimationIntensity: 0.006
     - _VertexAnimationStutter: 0
     - _Workflow: 2
     - _WrappedLighting: 1
