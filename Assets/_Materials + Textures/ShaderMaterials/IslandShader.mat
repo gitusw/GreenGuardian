@@ -11,6 +11,7 @@ Material:
   m_Shader: {fileID: 4800000, guid: 7633a2fd8a3bed44791c9e952ff86e5d, type: 3}
   m_ValidKeywords:
   - _MK_ARTISTIC_ANIMATION_STUTTER
+  - _MK_ARTISTIC_DRAWN
   - _MK_ARTISTIC_PROJECTION_SCREEN_SPACE
   - _MK_DETAIL_BLEND_MIX
   - _MK_DIFFUSE_MINNAERT
@@ -195,7 +196,7 @@ Material:
     - _AlphaClipping: 0
     - _AlphaCutoff: 0.5
     - _Anisotropy: 0
-    - _Artistic: 0
+    - _Artistic: 1
     - _ArtisticFrequency: 1
     - _ArtisticProjection: 1
     - _Blend: 0
@@ -238,9 +239,9 @@ Material:
     - _IridescenceSmoothness: 0.5
     - _IridescenceThresholdOffset: 0
     - _Light: 2
-    - _LightBands: 12
-    - _LightBandsScale: 1
-    - _LightThreshold: 1
+    - _LightBands: 10
+    - _LightBandsScale: 0.496
+    - _LightThreshold: 0.759
     - _LightTransmission: 2
     - _LightTransmissionDistortion: 0.25
     - _LightTransmissionIntensity: 2.12
@@ -298,8 +299,8 @@ Material:
     - _ZTest: 4
     - _ZWrite: 1
     m_Colors:
-    - _AlbedoColor: {r: 0.23323762, g: 0.4245283, b: 0.18222678, a: 1}
-    - _Color: {r: 0.2332376, g: 0.42452827, b: 0.18222675, a: 1}
+    - _AlbedoColor: {r: 0.3254902, g: 0.40000004, b: 0.20392159, a: 1}
+    - _Color: {r: 0.32549015, g: 0.4, b: 0.20392156, a: 1}
     - _DetailColor: {r: 1, g: 1, b: 1, a: 1}
     - _DissolveBorderColor: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
