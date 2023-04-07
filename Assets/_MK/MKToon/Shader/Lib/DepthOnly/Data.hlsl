@@ -3,7 +3,7 @@
 //					                                //
 // Created by Michael Kremmel                       //
 // www.michaelkremmel.de                            //
-// Copyright © 2021 All rights reserved.            //
+// Copyright © 2020 All rights reserved.            //
 //////////////////////////////////////////////////////
 
 #ifndef MK_TOON_DEPTH_ONLY_IO
@@ -50,7 +50,7 @@
 			half3 viewTangent : TEXCOORD1;
 		#endif
 
-		#ifdef MK_POS_CLIP
+		#ifdef MK_BARYCENTRIC_POS_CLIP
 			float4 positionClip : TEXCOORD2;
 		#endif
 		#ifdef MK_POS_NULL_CLIP

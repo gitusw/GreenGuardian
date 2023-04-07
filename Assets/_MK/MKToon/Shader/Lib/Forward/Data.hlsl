@@ -3,7 +3,7 @@
 //					                                //
 // Created by Michael Kremmel                       //
 // www.michaelkremmel.de                            //
-// Copyright © 2021 All rights reserved.            //
+// Copyright © 2020 All rights reserved.            //
 //////////////////////////////////////////////////////
 
 #ifndef MK_TOON_IO_FORWARD
@@ -98,7 +98,7 @@
 			//Interplators 5,6,7 + C1 are reserved for lighting stuff
 		#endif
 
-		#ifdef MK_POS_CLIP
+		#ifdef MK_BARYCENTRIC_POS_CLIP
 			float4 positionClip : TEXCOORD3;
 		#endif
 		#ifdef MK_POS_NULL_CLIP

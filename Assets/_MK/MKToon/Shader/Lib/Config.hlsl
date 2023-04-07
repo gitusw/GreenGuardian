@@ -3,7 +3,7 @@
 //					                                //
 // Created by Michael Kremmel                       //
 // www.michaelkremmel.de                            //
-// Copyright © 2021 All rights reserved.            //
+// Copyright © 2020 All rights reserved.            //
 //////////////////////////////////////////////////////
 
 #ifndef MK_TOON_DEFINES
@@ -102,6 +102,12 @@
 	#if defined(MK_URP) && UNITY_VERSION >= 202020
 		#ifndef MK_URP_2020_2_Or_Newer
 			#define MK_URP_2020_2_Or_Newer
+		#endif
+	#endif
+
+	#if defined(PROBE_VOLUMES_L1) || defined(PROBE_VOLUMES_L2)
+		#ifndef MK_PROBE_VOLUMES
+			#define MK_PROBE_VOLUMES
 		#endif
 	#endif
 
@@ -721,7 +727,7 @@
 		#endif
 	#endif
 
-	#if defined(MK_LIT) || defined(MK_INDEX_OF_REFRACTION) || defined(MK_VERTEX_ANIMATION_PULSE) || defined(MK_VERTEX_ANIMATION_NOISE)
+	#if defined(MK_DEPTH_NORMALS_PASS) || defined(MK_PROBE_VOLUMES) || defined(MK_LIT) || defined(MK_INDEX_OF_REFRACTION) || defined(MK_VERTEX_ANIMATION_PULSE) || defined(MK_VERTEX_ANIMATION_NOISE)
 		#ifndef MK_NORMAL
 			#define MK_NORMAL
 		#endif
@@ -834,7 +840,7 @@
 		#endif
 	#endif
 
-	#if defined(MK_REFRACTION) || defined(MK_IRIDESCENCE) || defined(MK_LightTransmission) || defined(MK_RIM) || defined(MK_SPECULAR) || defined(LIGHTMAP_ON) || defined(UNITY_SHOULD_SAMPLE_SH) || defined(DYNAMICLIGHTMAP_ON) || defined(DIRLIGHTMAP_COMBINED) || defined(MK_RIM) || defined(MK_ENVIRONMENT_REFLECTIONS_ADVANCED) || defined(MK_FRESNEL_HIGHLIGHTS) || defined(MK_DIFFUSE_MINNAERT) || defined(MK_DIFFUSE_OREN_NAYAR)
+	#if defined(MK_PROBE_VOLUMES) || defined(MK_REFRACTION) || defined(MK_IRIDESCENCE) || defined(MK_LightTransmission) || defined(MK_RIM) || defined(MK_SPECULAR) || defined(LIGHTMAP_ON) || defined(UNITY_SHOULD_SAMPLE_SH) || defined(DYNAMICLIGHTMAP_ON) || defined(DIRLIGHTMAP_COMBINED) || defined(MK_RIM) || defined(MK_ENVIRONMENT_REFLECTIONS_ADVANCED) || defined(MK_FRESNEL_HIGHLIGHTS) || defined(MK_DIFFUSE_MINNAERT) || defined(MK_DIFFUSE_OREN_NAYAR)
 		#ifndef MK_VD
 			#define MK_VD
 		#endif
@@ -859,8 +865,8 @@
 	#endif
 
 	#if defined(MK_POS_NULL_CLIP) || defined(MK_REFRACTION) || defined(MK_SOFT_FADE) || defined(MK_CAMERA_FADE) || defined(MK_SCREEN_UV)
-		#ifndef MK_POS_CLIP
-			#define MK_POS_CLIP
+		#ifndef MK_BARYCENTRIC_POS_CLIP
+			#define MK_BARYCENTRIC_POS_CLIP
 		#endif
 	#endif
 

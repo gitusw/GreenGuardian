@@ -3,7 +3,7 @@
 //					                                //
 // Created by Michael Kremmel                       //
 // www.michaelkremmel.de                            //
-// Copyright © 2021 All rights reserved.            //
+// Copyright © 2020 All rights reserved.            //
 //////////////////////////////////////////////////////
 
 #ifndef MK_TOON_LIGHTING
@@ -227,6 +227,15 @@
 		#endif
 	}
 
+	inline half3 ComputeSHVertex(float3 positionWorld, half3 normalWorld, half3 viewDirectionWorld)
+	{
+		#if UNITY_VERSION >= 202310 && (defined(PROBE_VOLUMES_L1) || defined(PROBE_VOLUMES_L2))
+			return SampleProbeVolumeVertex(positionWorld, normalWorld, viewDirectionWorld);
+		#else
+			return ComputeSHVertex(normalWorld);
+		#endif
+	}
+
 	inline float2 ComputeStaticLightmapUV(float2 staticLightmapUV)
 	{
 		return staticLightmapUV * unity_LightmapST.xy + unity_LightmapST.zw;
@@ -313,18 +322,32 @@
 		INITIALIZE_STRUCT(MKGI, gi);
 		#ifdef MK_INDIRECT
 			#if defined(MK_URP) || defined(MK_LWRP)
-				#if defined(LIGHTMAP_ON) && defined(DYNAMICLIGHTMAP_ON)
-					gi.diffuse = SampleLightmap(surfaceData.lightmapUV.xy, surfaceData.lightmapUV.zw, surfaceData.normalWorld);
-				#elif defined(DYNAMICLIGHTMAP_ON)
-					gi.diffuse = SampleLightmap(0, surfaceData.lightmapUV.zw, surfaceData.normalWorld);
-				#elif defined(LIGHTMAP_ON)
-					#if UNITY_VERSION >= 202120
-						gi.diffuse = SampleLightmap(surfaceData.lightmapUV.xy, 0, surfaceData.normalWorld);
+				#if UNITY_VERSION >= 202310
+					#if defined(DYNAMICLIGHTMAP_ON)
+						gi.diffuse = SAMPLE_GI(surfaceData.lightmapUV.xy, surfaceData.lightmapUV.zw, surfaceData.lightmapUV.rgb, surfaceData.normalWorld);
+					#elif !defined(LIGHTMAP_ON) && (defined(PROBE_VOLUMES_L1) || defined(PROBE_VOLUMES_L2))
+						gi.diffuse = SAMPLE_GI(surfaceData.lightmapUV.rgb,
+							GetAbsolutePositionWS(surfaceData.positionWorld),
+							surfaceData.normalWorld,
+							surfaceData.viewWorld,
+							surfaceData.svPositionClip.xy);
 					#else
-						gi.diffuse = SampleLightmap(surfaceData.lightmapUV.xy, surfaceData.normalWorld);
+						gi.diffuse = SAMPLE_GI(surfaceData.lightmapUV.xy, surfaceData.lightmapUV.rgb, surfaceData.normalWorld);
 					#endif
 				#else
-					gi.diffuse = SampleSHPixel(surfaceData.lightmapUV.rgb, surfaceData.normalWorld);
+					#if defined(LIGHTMAP_ON) && defined(DYNAMICLIGHTMAP_ON)
+						gi.diffuse = SampleLightmap(surfaceData.lightmapUV.xy, surfaceData.lightmapUV.zw, surfaceData.normalWorld);
+					#elif defined(DYNAMICLIGHTMAP_ON)
+						gi.diffuse = SampleLightmap(0, surfaceData.lightmapUV.zw, surfaceData.normalWorld);
+					#elif defined(LIGHTMAP_ON)
+						#if UNITY_VERSION >= 202120
+							gi.diffuse = SampleLightmap(surfaceData.lightmapUV.xy, 0, surfaceData.normalWorld);
+						#else
+							gi.diffuse = SampleLightmap(surfaceData.lightmapUV.xy, surfaceData.normalWorld);
+						#endif
+					#else
+						gi.diffuse = SampleSHPixel(surfaceData.lightmapUV.rgb, surfaceData.normalWorld);
+					#endif
 				#endif
 
 				gi.diffuse *= occlusion;
