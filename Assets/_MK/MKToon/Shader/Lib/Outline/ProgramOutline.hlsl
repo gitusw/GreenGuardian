@@ -3,7 +3,7 @@
 //					                                //
 // Created by Michael Kremmel                       //
 // www.michaelkremmel.de                            //
-// Copyright © 2021 All rights reserved.            //
+// Copyright © 2020 All rights reserved.            //
 //////////////////////////////////////////////////////
 
 #ifndef MK_TOON_OUTLINE_ONLY_BASE
@@ -123,7 +123,7 @@
 			vertexOutput.fogFactor = FogFactorVertex(vertexOutput.svPositionClip.z);
 		#endif
 
-		#ifdef MK_POS_CLIP
+		#ifdef MK_BARYCENTRIC_POS_CLIP
 			vertexOutput.positionClip = vertexOutput.svPositionClip;
 		#endif
 		#ifdef MK_POS_NULL_CLIP
@@ -149,11 +149,12 @@
 		INITIALIZE_STRUCT(MKFragmentOutput, mkFragmentOutput);
 
 		#ifdef MK_LOD_FADE_CROSSFADE
-			LODFadeCrossFade(vertexOutputLight.SV_CLIP_POS);
+			LODFadeCrossFade(vertexOutput.SV_CLIP_POS);
 		#endif
 
 		MKSurfaceData surfaceData = ComputeSurfaceData
 		(
+			vertexOutput.svPositionClip,
 			PASS_POSITION_WORLD_ARG(0)
 			PASS_FOG_FACTOR_WORLD_ARG(vertexOutput.fogFactor)
 			PASS_BASE_UV_ARG(float4(vertexOutput.uv.xy, 0, 0))
@@ -164,7 +165,7 @@
 			PASS_TANGENT_WORLD_ARG(1)
 			PASS_VIEW_TANGENT_ARG(vertexOutput.viewTangent)
 			PASS_BITANGENT_WORLD_ARG(1)
-			PASS_POSITION_CLIP_ARG(vertexOutput.positionClip)
+			PASS_BARYCENTRIC_POSITION_CLIP_ARG(vertexOutput.positionClip)
 			PASS_NULL_CLIP_ARG(vertexOutput.nullClip)
 			PASS_FLIPBOOK_UV_ARG(vertexOutput.flipbookUV)
 		);

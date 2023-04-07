@@ -3,7 +3,7 @@
 //					                                //
 // Created by Michael Kremmel                       //
 // www.michaelkremmel.de                            //
-// Copyright © 2021 All rights reserved.            //
+// Copyright © 2020 All rights reserved.            //
 //////////////////////////////////////////////////////
 
 #ifndef MK_TOON_DEPTH_ONLY
@@ -43,7 +43,7 @@
 			vertexOutput.viewTangent = ComputeViewTangent(ComputeViewObject(vertexInput.vertex.xyz), vertexInput.normal, vertexInput.tangent.xyz, cross(vertexInput.normal, vertexInput.tangent.xyz) * vertexInput.tangent.w * unity_WorldTransformParams.w);
 		#endif
 
-		#ifdef MK_POS_CLIP
+		#ifdef MK_BARYCENTRIC_POS_CLIP
 			vertexOutput.positionClip = vertexOutput.svPositionClip;
 		#endif
 		#ifdef MK_POS_NULL_CLIP
@@ -67,6 +67,7 @@
 
 		MKSurfaceData surfaceData = ComputeSurfaceData
 		(
+			vertexOutput.svPositionClip,
 			PASS_POSITION_WORLD_ARG(0)
 			PASS_FOG_FACTOR_WORLD_ARG(0)
 			PASS_BASE_UV_ARG(float4(vertexOutput.uv, 0, 0))
@@ -77,7 +78,7 @@
 			PASS_TANGENT_WORLD_ARG(1)
 			PASS_VIEW_TANGENT_ARG(vertexOutput.viewTangent)
 			PASS_BITANGENT_WORLD_ARG(1)
-			PASS_POSITION_CLIP_ARG(vertexOutput.positionClip)
+			PASS_BARYCENTRIC_POSITION_CLIP_ARG(vertexOutput.positionClip)
 			PASS_NULL_CLIP_ARG(vertexOutput.nullClip)
 			PASS_FLIPBOOK_UV_ARG(0)
 		);

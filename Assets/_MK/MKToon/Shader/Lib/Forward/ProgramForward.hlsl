@@ -3,7 +3,7 @@
 //					                                //
 // Created by Michael Kremmel                       //
 // www.michaelkremmel.de                            //
-// Copyright © 2021 All rights reserved.            //
+// Copyright © 2020 All rights reserved.            //
 //////////////////////////////////////////////////////
 
 #ifndef MK_TOON_FORWARD
@@ -85,7 +85,7 @@
 						#if defined(LIGHTMAP_ON)
 							vertexOutputLight.lightmapUV.xy = ComputeStaticLightmapUV(VERTEX_INPUT.staticLightmapUV.xy);
 						#else
-							vertexOutputLight.lightmapUV.rgb = SampleSHVertex(vertexOutput.normalWorld.xyz);
+							vertexOutputLight.lightmapUV.rgb = ComputeSHVertex(vertexOutput.positionWorld.xyz, vertexOutput.normalWorld.xyz, ComputeViewWorld(vertexOutput.positionWorld.xyz));
 						#endif
 					#else
 						//lightmaps and ambient
@@ -94,7 +94,7 @@
 							vertexOutputLight.lightmapUV.xy = ComputeStaticLightmapUV(VERTEX_INPUT.staticLightmapUV.xy);
 						//If no lightmaps used, do vertex lit if enabled
 						#elif defined(UNITY_SHOULD_SAMPLE_SH)
-							vertexOutputLight.lightmapUV.rgb = ComputeSHVertex(vertexOutput.normalWorld.xyz);
+							vertexOutputLight.lightmapUV.rgb = ComputeSHVertex(vertexOutput.positionWorld.xyz, vertexOutput.normalWorld.xyz, ComputeViewWorld(vertexOutput.positionWorld.xyz));
 						#endif
 					#endif
 
@@ -108,7 +108,7 @@
 			TRANSFORM_WORLD_TO_SHADOW_COORDS(vertexOutput, VERTEX_INPUT, vertexOutputLight)
 		#endif
 
-		#ifdef MK_POS_CLIP
+		#ifdef MK_BARYCENTRIC_POS_CLIP
 			vertexOutput.positionClip = vertexOutputLight.SV_CLIP_POS;
 		#endif
 		#ifdef MK_POS_NULL_CLIP
@@ -143,6 +143,7 @@
 
 		MKSurfaceData surfaceData = ComputeSurfaceData
 		(
+			vertexOutputLight.SV_CLIP_POS,
 			PASS_POSITION_WORLD_ARG(vertexOutput.positionWorld.xyz)
 			PASS_FOG_FACTOR_WORLD_ARG(vertexOutput.positionWorld.w)
 			PASS_BASE_UV_ARG(vertexOutput.uv)
@@ -153,7 +154,7 @@
 			PASS_TANGENT_WORLD_ARG(vertexOutput.tangentWorld.xyz)
 			PASS_VIEW_TANGENT_ARG(half3(vertexOutput.normalWorld.w, vertexOutput.tangentWorld.w, vertexOutput.bitangentWorld.w))
 			PASS_BITANGENT_WORLD_ARG(vertexOutput.bitangentWorld.xyz)
-			PASS_POSITION_CLIP_ARG(vertexOutput.positionClip)
+			PASS_BARYCENTRIC_POSITION_CLIP_ARG(vertexOutput.positionClip)
 			PASS_NULL_CLIP_ARG(vertexOutput.nullClip)
 			PASS_FLIPBOOK_UV_ARG(vertexOutput.flipbookUV)
 		);
