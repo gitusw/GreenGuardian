@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 150893348285859352}
   - component: {fileID: 7318104719562120995}
   - component: {fileID: 6597527301467075908}
+  - component: {fileID: -5182577313007237733}
   m_Layer: 0
   m_Name: S_BoxB
   m_TagString: Moveable
@@ -83,3 +84,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &-5182577313007237733
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1966201356110848020}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -6457790658544674929, guid: ea62623e36168c54cb546a1e44a0df63, type: 3}
