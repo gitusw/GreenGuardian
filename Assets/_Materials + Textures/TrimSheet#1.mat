@@ -28,11 +28,12 @@ Material:
   - _MK_DETAIL_BLEND_MIX
   - _MK_ENVIRONMENT_REFLECTIONS_ADVANCED
   - _MK_FRESNEL_HIGHLIGHTS
-  - _MK_LIGHT_CEL
+  - _MK_LIGHT_RAMP
   - _MK_NORMAL_MAP
   - _MK_OCCLUSION_MAP
   - _MK_OUTLINE_HULL_CLIP
   - _MK_RECEIVE_SHADOWS
+  - _MK_THRESHOLD_MAP
   - _MK_WORKFLOW_ROUGHNESS
   - _MK_WRAPPED_DIFFUSE
   m_InvalidKeywords:
@@ -84,7 +85,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DiffuseRamp:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: d7c3d340235cfd64fbe9468fd8dc1384, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DissolveBorderRamp:
@@ -192,7 +193,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ThresholdMap:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 5e8d657d59d70f14795731b74a0a5a7e, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _VertexAnimationMap:
@@ -242,7 +243,7 @@ Material:
     - _DetailNormalMapScale: 1
     - _Diffuse: 0
     - _DiffuseSmoothness: 0
-    - _DiffuseThresholdOffset: 0.25
+    - _DiffuseThresholdOffset: 1
     - _Dissolve: 0
     - _DissolveAmount: 0.5
     - _DissolveBorderSize: 0.25
@@ -265,10 +266,10 @@ Material:
     - _IridescenceSize: 1
     - _IridescenceSmoothness: 0.5
     - _IridescenceThresholdOffset: 0
-    - _Light: 1
-    - _LightBands: 4
-    - _LightBandsScale: 0.5
-    - _LightThreshold: 0.5
+    - _Light: 3
+    - _LightBands: 5
+    - _LightBandsScale: 0.867
+    - _LightThreshold: 0.561
     - _LightTransmission: 0
     - _LightTransmissionDistortion: 0.25
     - _LightTransmissionIntensity: 1
@@ -295,7 +296,7 @@ Material:
     - _RimSize: 1
     - _RimSmoothness: 0.5
     - _RimThresholdOffset: 0.25
-    - _Roughness: 0.5
+    - _Roughness: 0
     - _Saturation: 1
     - _SketchMapScale: 1
     - _Smoothness: 0
@@ -314,9 +315,9 @@ Material:
     - _StencilRef: 0
     - _StencilWriteMask: 255
     - _StencilZFail: 0
-    - _StylizeTab: 0
+    - _StylizeTab: 1
     - _Surface: 0
-    - _ThresholdMapScale: 1
+    - _ThresholdMapScale: 6
     - _VertexAnimation: 0
     - _VertexAnimationIntensity: 0.05
     - _VertexAnimationStutter: 0
