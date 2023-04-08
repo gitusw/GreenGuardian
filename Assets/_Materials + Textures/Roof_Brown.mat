@@ -16,10 +16,14 @@ Material:
   - _MK_DETAIL_BLEND_MIX
   - _MK_ENVIRONMENT_REFLECTIONS_ADVANCED
   - _MK_FRESNEL_HIGHLIGHTS
+  - _MK_HEIGHT_MAP
   - _MK_LIGHT_BANDED
   - _MK_NORMAL_MAP
   - _MK_OCCLUSION_MAP
   - _MK_OUTLINE_HULL_CLIP
+  - _MK_PARALLAX
+  - _MK_PBS_MAP_0
+  - _MK_PBS_MAP_1
   - _MK_RECEIVE_SHADOWS
   - _MK_THRESHOLD_MAP
   - _MK_WORKFLOW_ROUGHNESS
@@ -114,7 +118,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _HeightMap:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 9af31d1016038fe48a2508141a0c392b, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _IridescenceRamp:
@@ -134,7 +138,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicMap:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: ce7a0b54f8ad74a49bcc43096c242623, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NormalMap:
@@ -158,7 +162,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _RoughnessMap:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 5ad95a13a3e1afe4d80ceaa76940c06f, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SketchMap:

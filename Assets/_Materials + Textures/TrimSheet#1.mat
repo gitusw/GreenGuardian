@@ -32,6 +32,8 @@ Material:
   - _MK_NORMAL_MAP
   - _MK_OCCLUSION_MAP
   - _MK_OUTLINE_HULL_CLIP
+  - _MK_PBS_MAP_0
+  - _MK_PBS_MAP_1
   - _MK_RECEIVE_SHADOWS
   - _MK_THRESHOLD_MAP
   - _MK_WORKFLOW_ROUGHNESS
@@ -145,7 +147,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicMap:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 18e9e47f2229e764ab5f38dd0a2ebfe5, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NormalMap:
@@ -169,7 +171,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _RoughnessMap:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: ee9d3a7f2685fb5439a9dd0c12f44dc5, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SketchMap:
