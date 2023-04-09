@@ -25,14 +25,14 @@ Material:
   m_ValidKeywords:
   - _MK_ALBEDO_MAP
   - _MK_ARTISTIC_ANIMATION_STUTTER
+  - _MK_ARTISTIC_SKETCH
   - _MK_DETAIL_BLEND_MIX
   - _MK_ENVIRONMENT_REFLECTIONS_AMBIENT
   - _MK_HEIGHT_MAP
-  - _MK_LIGHT_CEL
+  - _MK_LIGHT_BANDED
   - _MK_NORMAL_MAP
   - _MK_OCCLUSION_MAP
   - _MK_OUTLINE_HULL_CLIP
-  - _MK_PARALLAX
   - _MK_PBS_MAP_0
   - _MK_RECEIVE_SHADOWS
   - _MK_SPECULAR_ISOTROPIC
@@ -57,7 +57,7 @@ Material:
     m_TexEnvs:
     - _AlbedoMap:
         m_Texture: {fileID: 2800000, guid: 5e01734bcbb99f542881aebd807c960c, type: 3}
-        m_Scale: {x: 2, y: 2}
+        m_Scale: {x: 3, y: 3}
         m_Offset: {x: 0, y: 0}
     - _BaseMap:
         m_Texture: {fileID: 2800000, guid: 5e01734bcbb99f542881aebd807c960c, type: 3}
@@ -223,7 +223,7 @@ Material:
     - _AlphaClipping: 0
     - _AlphaCutoff: 0.5
     - _Anisotropy: 0
-    - _Artistic: 0
+    - _Artistic: 3
     - _ArtisticFrequency: 1
     - _ArtisticProjection: 0
     - _Blend: 0
@@ -269,17 +269,17 @@ Material:
     - _IridescenceSize: 1
     - _IridescenceSmoothness: 0.5
     - _IridescenceThresholdOffset: 0
-    - _Light: 1
-    - _LightBands: 4
-    - _LightBandsScale: 0.5
-    - _LightThreshold: 0.5
+    - _Light: 2
+    - _LightBands: 7
+    - _LightBandsScale: 0.41
+    - _LightThreshold: 0.662
     - _LightTransmission: 0
     - _LightTransmissionDistortion: 0.25
     - _LightTransmissionIntensity: 1
     - _LightTransmissionSmoothness: 0.5
     - _LightTransmissionThresholdOffset: 0.25
     - _Metallic: 0
-    - _NormalMapIntensity: 0
+    - _NormalMapIntensity: 3
     - _OcclusionMapIntensity: 1
     - _OcclusionStrength: 1
     - _OptionsTab: 1
@@ -290,7 +290,7 @@ Material:
     - _OutlineNoise: 0
     - _OutlineSize: 5
     - _OutlineTab: 0
-    - _Parallax: 0.005
+    - _Parallax: 0
     - _QueueOffset: 0
     - _ReceiveShadows: 1
     - _RenderFace: 2
@@ -320,7 +320,7 @@ Material:
     - _StencilRef: 0
     - _StencilWriteMask: 255
     - _StencilZFail: 0
-    - _StylizeTab: 0
+    - _StylizeTab: 1
     - _Surface: 0
     - _ThresholdMapScale: 1
     - _VertexAnimation: 0
