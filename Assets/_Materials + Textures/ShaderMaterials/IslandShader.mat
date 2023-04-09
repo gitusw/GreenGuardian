@@ -19,6 +19,7 @@ Material:
   - _MK_FRESNEL_HIGHLIGHTS
   - _MK_LIGHT_BANDED
   - _MK_LIGHT_TRANSMISSION_SUB_SURFACE_SCATTERING
+  - _MK_NORMAL_MAP
   - _MK_OUTLINE_HULL_CLIP
   - _MK_OUTLINE_NOISE
   - _MK_RECEIVE_SHADOWS
@@ -130,7 +131,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NormalMap:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: c9b76578734dcd949aacd816a6941e8a, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
@@ -249,7 +250,7 @@ Material:
     - _LightTransmissionThresholdOffset: 0.25
     - _Metallic: 0
     - _Mode: 0
-    - _NormalMapIntensity: 1
+    - _NormalMapIntensity: 0.2
     - _OcclusionMapIntensity: 1
     - _OcclusionStrength: 1
     - _OptionsTab: 1
