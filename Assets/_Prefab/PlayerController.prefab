@@ -308,6 +308,7 @@ MonoBehaviour:
       UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"WindIcon","value":{"$content":7,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
       UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"LiftIcon","value":{"$content":8,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
       UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"floatIcon","value":{"$content":9,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
+      UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"FloatTrails","value":{"$content":10,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
       UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
     _objectReferences:
     - {fileID: 3441685832319781549}
@@ -320,6 +321,7 @@ MonoBehaviour:
     - {fileID: 8111010491662855110}
     - {fileID: 406926835490378302}
     - {fileID: 4401759685478121107}
+    - {fileID: 8572174531764060825}
 --- !u!95 &2314343896569453265
 Animator:
   serializedVersion: 4
@@ -605,7 +607,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3441685832319781715}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.2303355, y: 4.391967, z: -2.7378495}
+  m_LocalPosition: {x: 0.40335435, y: 5.6219225, z: -9.732308}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1793,8 +1795,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5719182834549940614}
-  m_LocalRotation: {x: 0.026855249, y: 0.50711936, z: -0.015935447, w: 0.86131}
-  m_LocalPosition: {x: -56.04192, y: -1.2272401, z: -55.166744}
+  m_LocalRotation: {x: -0, y: -0.72662884, z: -0, w: 0.68703026}
+  m_LocalPosition: {x: 36.811565, y: 6.022307, z: -11.140613}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2691,9 +2693,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 394617756064858686}
     m_Modifications:
+    - target: {fileID: 5586498533159024035, guid: 28bca69f0eb5033488fa569bc5b9385d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5586498533159024035, guid: 28bca69f0eb5033488fa569bc5b9385d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5586498533159024035, guid: 28bca69f0eb5033488fa569bc5b9385d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6562750529031683064, guid: 28bca69f0eb5033488fa569bc5b9385d, type: 3}
       propertyPath: m_Name
       value: Float_VFX
+      objectReference: {fileID: 0}
+    - target: {fileID: 6562750529031683064, guid: 28bca69f0eb5033488fa569bc5b9385d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6562750529031683071, guid: 28bca69f0eb5033488fa569bc5b9385d, type: 3}
       propertyPath: m_RootOrder
@@ -2753,6 +2771,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 28bca69f0eb5033488fa569bc5b9385d, type: 3}
+--- !u!1 &8572174531764060825 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6562750529031683064, guid: 28bca69f0eb5033488fa569bc5b9385d, type: 3}
+  m_PrefabInstance: {fileID: 3307306256364091745}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8572174531764060830 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6562750529031683071, guid: 28bca69f0eb5033488fa569bc5b9385d, type: 3}
